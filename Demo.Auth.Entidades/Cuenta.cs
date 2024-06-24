@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Demo.Auth.Entidades
 {
-    internal class Cuenta
+    public class Cuenta
     {
+        public string Identificador { get; set; }
         public string NumeroCuenta { get; set; }
         public string Titular { get; set; }
         public decimal Saldo { get; set; }

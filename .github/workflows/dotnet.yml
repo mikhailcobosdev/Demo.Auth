@@ -28,7 +28,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Publish1
       run: dotnet publish Demo.Auth.Servicio/Demo.Auth.Servicio.csproj -c Release1 -o release1
-    - name: Upload a Build Artifact
+    - name: Upload a Build Artifact 1
       uses: actions/upload-artifact@v4.3.3
       with:
         # Artifact name
@@ -37,7 +37,7 @@ jobs:
         path: /home/runner/work/Demo.Auth/Demo.Auth/release1/
     - name: Publish2
       run: dotnet publish Demo.Auth.Servicio2/Demo.Auth.Servicio2.csproj -c Release2 -o release2
-    - name: Upload a Build Artifact
+    - name: Upload a Build Artifact 2
       uses: actions/upload-artifact@v4.3.3
       with:
         # Artifact name

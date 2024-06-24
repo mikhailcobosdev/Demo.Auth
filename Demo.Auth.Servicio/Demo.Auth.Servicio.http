@@ -1,0 +1,6 @@
+@Demo.Auth.Servicio_HostAddress = http://localhost:5272
+
+GET {{Demo.Auth.Servicio_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

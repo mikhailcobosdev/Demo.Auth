@@ -28,3 +28,13 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Publish
       run: dotnet publish Demo.Auth.Servicio/Demo.Auth.Servicio.csproj -c Release -o release
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.3
+      with:
+        # Artifact name
+        name: Deploy Service # optional, default is artifact
+        # A file, directory or wildcard pattern that describes what to upload
+        path: 
+        # The desired behavior if no files are found using the provided path.
+
+          

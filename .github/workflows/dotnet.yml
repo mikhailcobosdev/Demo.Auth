@@ -27,7 +27,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish Demo.Auth.Servicio/Demo.Auth.Servicio.csproj -c Release -o release --no-logo releases
+      run: dotnet publish Demo.Auth.Servicio/Demo.Auth.Servicio.csproj -c Release -o release
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.3.3
       with:

@@ -92,7 +92,16 @@ namespace Demo.Auth.BDD.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void CrearUnaCuentaDigitalConLaIdentificacionDelCliente(string nombre, string apellidos, string dni, string email, string telefono, string[] exampleTags)
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line hidden
+#line 7
+ testRunner.Given("que estoy en la página de de creación de cuenta digital", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
+        public virtual void CrearUnaCuentaDigitalConLaIdentificacionDelCliente(string nombre, string apellido, string fechaNacimiento, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "tag1"};
@@ -102,13 +111,11 @@ namespace Demo.Auth.BDD.Features
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("nombre", nombre);
-            argumentsOfScenario.Add("apellidos", apellidos);
-            argumentsOfScenario.Add("dni", dni);
-            argumentsOfScenario.Add("email", email);
-            argumentsOfScenario.Add("teléfono", telefono);
+            argumentsOfScenario.Add("Nombre", nombre);
+            argumentsOfScenario.Add("Apellido", apellido);
+            argumentsOfScenario.Add("FechaNacimiento", fechaNacimiento);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Crear una cuenta digital con la identificación del cliente", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -118,16 +125,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
- testRunner.Given("La página de registro de cuenta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 9
- testRunner.And(string.Format("los Datos del cliente [{0}, {1}, {2}, {3}, {4}]", nombre, apellidos, dni, email, telefono), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 10
- testRunner.When("pulson sobre el boton de Crear cuenta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 6
+this.FeatureBackground();
 #line hidden
 #line 11
+ testRunner.And(string.Format("los Datos del cliente \'{0}\' ,\'{1}\', \'{2}\'", nombre, apellido, fechaNacimiento), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 12
+ testRunner.When("pulso sobre el boton de Crear cuenta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 13
  testRunner.Then("Cuenta digital creada", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -139,15 +146,115 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creación de una cuenta digital")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("tag1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Juan")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:nombre", "Juan")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:apellidos", "Pérez")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:dni", "12345678A")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email", "jperez@banco.com")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:teléfono", "0986533325")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Nombre", "Juan")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Apellido", "Parra")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FechaNacimiento", "25.06.1980")]
         public void CrearUnaCuentaDigitalConLaIdentificacionDelCliente_Juan()
         {
-#line 7
-this.CrearUnaCuentaDigitalConLaIdentificacionDelCliente("Juan", "Pérez", "12345678A", "jperez@banco.com", "0986533325", ((string[])(null)));
+#line 10
+this.CrearUnaCuentaDigitalConLaIdentificacionDelCliente("Juan", "Parra", "25.06.1980", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Crear una cuenta digital con la identificación del cliente: Maria")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creación de una cuenta digital")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("tag1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Maria")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Nombre", "Maria")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Apellido", "Perez")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FechaNacimiento", "25.06.1980")]
+        public void CrearUnaCuentaDigitalConLaIdentificacionDelCliente_Maria()
+        {
+#line 10
+this.CrearUnaCuentaDigitalConLaIdentificacionDelCliente("Maria", "Perez", "25.06.1980", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Crear una cuenta digital con la identificación del cliente: Pedro")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creación de una cuenta digital")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("tag1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Pedro")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Nombre", "Pedro")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Apellido", "Gomez")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FechaNacimiento", "25.06.1980")]
+        public void CrearUnaCuentaDigitalConLaIdentificacionDelCliente_Pedro()
+        {
+#line 10
+this.CrearUnaCuentaDigitalConLaIdentificacionDelCliente("Pedro", "Gomez", "25.06.1980", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void ErrorCrearUnaCuentaDigitalConLaIdentificacionDelClienteYaQueNoExiste(string identificacion, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Identificación", identificacion);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Error Crear una cuenta digital con la identificación del cliente ya que no existe" +
+                    "", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 21
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 22
+ testRunner.And(string.Format("los Datos del cliente  \'{0}\'", identificacion), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 23
+ testRunner.When("pulso sobre el boton de Crear cuenta", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 24
+ testRunner.Then("Error cliente no existe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Error Crear una cuenta digital con la identificación del cliente ya que no existe" +
+            ": 1718586952")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creación de una cuenta digital")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "1718586952")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Identificación", "1718586952")]
+        public void ErrorCrearUnaCuentaDigitalConLaIdentificacionDelClienteYaQueNoExiste_1718586952()
+        {
+#line 21
+this.ErrorCrearUnaCuentaDigitalConLaIdentificacionDelClienteYaQueNoExiste("1718586952", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Error Crear una cuenta digital con la identificación del cliente ya que no existe" +
+            ": 1718586953")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creación de una cuenta digital")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "1718586953")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Identificación", "1718586953")]
+        public void ErrorCrearUnaCuentaDigitalConLaIdentificacionDelClienteYaQueNoExiste_1718586953()
+        {
+#line 21
+this.ErrorCrearUnaCuentaDigitalConLaIdentificacionDelClienteYaQueNoExiste("1718586953", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Error Crear una cuenta digital con la identificación del cliente ya que no existe" +
+            ": 1718586954")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creación de una cuenta digital")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "1718586954")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Identificación", "1718586954")]
+        public void ErrorCrearUnaCuentaDigitalConLaIdentificacionDelClienteYaQueNoExiste_1718586954()
+        {
+#line 21
+this.ErrorCrearUnaCuentaDigitalConLaIdentificacionDelClienteYaQueNoExiste("1718586954", ((string[])(null)));
 #line hidden
         }
     }

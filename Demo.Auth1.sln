@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Auth.Servicio", "Demo.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Auth.Negocio", "Demo.Auth.Negocio\Demo.Auth.Negocio.csproj", "{4069C0A4-E73F-4DED-86E7-5FE27DE54DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Auth.Test", "Demo.Auth.Test\Demo.Auth.Test.csproj", "{840F60E6-FB74-44DE-8156-609B373AFE45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Auth.Test", "Demo.Auth.Test\Demo.Auth.Test.csproj", "{840F60E6-FB74-44DE-8156-609B373AFE45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Auth.Servicio2", "Demo.Auth.Servicio2\Demo.Auth.Servicio2.csproj", "{D25561DB-22BA-4AB3-A050-311D7F235E9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Auth.Servicio2", "Demo.Auth.Servicio2\Demo.Auth.Servicio2.csproj", "{D25561DB-22BA-4AB3-A050-311D7F235E9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Auth.BDD", "Demo.Auth.BDD\Demo.Auth.BDD.csproj", "{F30CC2DF-DFBD-4A28-B30F-3F11FDD037F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D25561DB-22BA-4AB3-A050-311D7F235E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D25561DB-22BA-4AB3-A050-311D7F235E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D25561DB-22BA-4AB3-A050-311D7F235E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30CC2DF-DFBD-4A28-B30F-3F11FDD037F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30CC2DF-DFBD-4A28-B30F-3F11FDD037F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30CC2DF-DFBD-4A28-B30F-3F11FDD037F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30CC2DF-DFBD-4A28-B30F-3F11FDD037F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

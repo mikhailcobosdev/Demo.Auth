@@ -49,7 +49,7 @@ jobs:
       with:
         server: win5022.site4now.net
         username: mcobos-ftp
-        password: 6sHuwfiLUO2Uia
+        password: ${{ secrets.FTP_SECRET }}
         local-dir: /home/runner/work/Demo.Auth/Demo.Auth/release1/
 
           

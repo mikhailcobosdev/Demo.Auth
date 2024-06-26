@@ -51,7 +51,7 @@ jobs:
         username: mcobos-001
         password: Mikh@Smarter1
         local-dir: /home/runner/work/Demo.Auth/Demo.Auth/release1/
-        server-dir: golazovirtual
+        server-dir: golazovirtual/
 
           
     

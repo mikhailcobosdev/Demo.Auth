@@ -47,8 +47,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: win5022.site4now.net
-        username: mcobos-ftp
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USER}}
         password: ${{ secrets.FTP_SECRET }}
         local-dir: /home/runner/work/Demo.Auth/Demo.Auth/release1/
         dangerous-clean-slate: true

@@ -48,10 +48,9 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: win5022.site4now.net
-        username: mcobos-001
-        password: Mikh@Smarter1
+        username: mcobos-ftp
+        password: 6sHuwfiLUO2Uia
         local-dir: /home/runner/work/Demo.Auth/Demo.Auth/release1/
-        server-dir: golazovirtual/
 
           
     

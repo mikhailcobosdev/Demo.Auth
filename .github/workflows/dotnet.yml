@@ -51,6 +51,7 @@ jobs:
         username: mcobos-ftp
         password: ${{ secrets.FTP_SECRET }}
         local-dir: /home/runner/work/Demo.Auth/Demo.Auth/release1/
+        dangerous-clean-slate: true
 
           
     

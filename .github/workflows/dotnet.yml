@@ -44,12 +44,12 @@ jobs:
         name: DeployService2 # optional, default is artifact
         # A file, directory or wildcard pattern that describes what to upload
         path: /home/runner/work/Demo.Auth/Demo.Auth/release2/
-    - name: WebDeploy
-      uses: ChristopheLav/iis-deploy@v1
+    - name: Deploy to Simply        
+      uses: talunzhang/auto-web-deploy@v1.0.1
       with:
         website-name: mcobos-001-site11
-        msdeploy-service-url: https://win5022.site4now.net:8172/MsDeploy.axd?site=mcobos-001-site11
-        msdeploy-username: mcobos-001
-        msdeploy-password: wiypYkwCva4LhO
-        source-path: ${{ github.workspace }}\website\publish
+        server-computer-name: https://win5022.site4now.net:8172/MsDeploy.axd
+        server-username: mcobos-001
+        server-password: wiypYkwCva4LhO
+        source-path: /home/runner/work/Demo.Auth/Demo.Auth/release1/
     
